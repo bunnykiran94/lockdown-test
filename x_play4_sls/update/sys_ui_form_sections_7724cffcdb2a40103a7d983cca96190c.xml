@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="7724cffcdb2a40103a7d983cca96190c" sys_domain="c919ba2f4a36231200050bc7cc6bf272" table="x_play4_sls_incident" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>liudmilap</sys_created_by>
+            <sys_created_on>2020-01-22 15:48:01</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>0434cffcdb2a40103a7d983cca96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_play4_sls_incident" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">7724cffcdb2a40103a7d983cca96190c</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">5d3ebdf0db224010e9ae96f8f49619f4</sys_ui_section>
+            <sys_updated_by>liudmilap</sys_updated_by>
+            <sys_updated_on>2020-01-22 15:48:01</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>liudmilap</sys_created_by>
+            <sys_created_on>2020-01-22 15:48:01</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>4834cffcdb2a40103a7d983cca961910</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_play4_sls_incident" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">7724cffcdb2a40103a7d983cca96190c</sys_ui_form>
+            <sys_ui_section caption="Closure data" display_value="Closure data" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">bb24cffcdb2a40103a7d983cca96190a</sys_ui_section>
+            <sys_updated_by>liudmilap</sys_updated_by>
+            <sys_updated_on>2020-04-03 18:55:21</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>mihailz</sys_created_by>
+            <sys_created_on>2020-01-29 10:35:37</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>04df3907db628050e9ae96f8f496194c</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_play4_sls_incident" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">7724cffcdb2a40103a7d983cca96190c</sys_ui_form>
+            <sys_ui_section caption="Incident snapshot" display_value="Incident snapshot" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">48df3907db628050e9ae96f8f4961948</sys_ui_section>
+            <sys_updated_by>liudmilap</sys_updated_by>
+            <sys_updated_on>2020-04-03 18:55:21</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_play4_sls_incident</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>liudmilap</sys_created_by>
+            <sys_created_on>2020-01-22 15:48:01</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>7724cffcdb2a40103a7d983cca96190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_play4_sls_incident</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+            <sys_update_name>sys_ui_form_sections_7724cffcdb2a40103a7d983cca96190c</sys_update_name>
+            <sys_updated_by>liudmilap</sys_updated_by>
+            <sys_updated_on>2020-01-22 15:48:01</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

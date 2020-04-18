@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>sls_add_notification_group_to_cc</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+	
+	if (!current.u_notification_group.nil()) {
+		var notification_group = current.u_notification_group.split(",");
+		var grGroup = new GlideRecord('sys_user_group');
+		grGroup.addQuery('sys_id', notification_group);
+		grGroup.query();
+		while (grGroup.next()) {
+			if (!gr.email.nil()) {
+				email.addAddress("cc", grGroup.getValue('email'), grGroup.getValue('name'));
+			} else {
+				var groupMembers = new GlideRecord('sys_user_grmember');
+				groupMembers.addEncodedQuery('group=' + notification_group + '^user.emailISNOTEMPTY');
+				groupMembers.query();
+				while (groupMembers.next()) {
+					email.addAddress("cc", groupMembers.user.email, groupMembers.user.getDisplayValue());
+				}
+			}
+		}
+	}
+	
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-04-08 18:09:17</sys_created_on>
+        <sys_id>92ddf325db001c103a7d983cca9619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sls_add_notification_group_to_cc</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_email_92ddf325db001c103a7d983cca9619b9</sys_update_name>
+        <sys_updated_by>liudmilap</sys_updated_by>
+        <sys_updated_on>2020-04-08 18:09:17</sys_updated_on>
+    </sys_script_email>
+</record_update>

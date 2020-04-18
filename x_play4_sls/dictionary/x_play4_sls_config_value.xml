@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Configuration value" max_length="40" name="x_play4_sls_config_value" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="1" label="Element" max_length="40" name="element" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="First complain" value="first_complain"/>
+                <element inactive_on_update="false" label="Incident origin" value="incident_origin"/>
+                <element inactive_on_update="false" label="Issue level" value="issue_level"/>
+                <element inactive_on_update="false" label="Issue sublevel" value="issue_sublevel"/>
+                <element inactive_on_update="false" label="OUI" value="oui"/>
+                <element inactive_on_update="false" label="Priority" value="priotiry"/>
+                <element inactive_on_update="false" label="Status code" value="status_code"/>
+                <element inactive_on_update="false" label="Status" sequence="10" value="status"/>
+                <element inactive_on_update="false" label="Studio" sequence="20" value="studio"/>
+                <element inactive_on_update="false" label="Business unit" sequence="30" value="bu"/>
+                <element inactive_on_update="false" label="Domain" sequence="40" value="domain"/>
+                <element inactive_on_update="false" label="Root cause category" sequence="50" value="root_cause_cat"/>
+                <element inactive_on_update="false" label="Root cause subcategory" sequence="60" value="root_cause_subcat"/>
+                <element inactive_on_update="false" label="Issue level" sequence="70" value="issue_level"/>
+                <element inactive_on_update="false" label="Issue sublevel" sequence="80" value="issue_sublevel"/>
+                <element inactive_on_update="false" label="Business Service" sequence="90" value="business_service"/>
+                <element inactive_on_update="false" label="Category group" sequence="100" value="category_group"/>
+                <element inactive_on_update="false" label="Category" sequence="110" value="category"/>
+                <element inactive_on_update="false" label="Subcategory" sequence="120" value="subcategory"/>
+            </choice>
+        </element>
+        <element display="true" label="Label" max_length="40" name="label" type="string"/>
+        <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Order" max_length="40" name="order" type="integer"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Short description" max_length="80" name="short_description" type="string"/>
+    </element>
+</database>

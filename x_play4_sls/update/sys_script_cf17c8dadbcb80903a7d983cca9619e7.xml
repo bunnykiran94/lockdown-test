@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="c919ba2f4a36231200050bc7cc6bf272" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>true</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_play4_sls_incident</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>SLS Incident snapshot</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	var incID = 'e8eee670db0b00d02cc15c8a689619bb';//current.sys_id;
+	var snapshotMethods = new SLSIncidentSnapshotUtils(incID);
+	
+	var totalComplaints = snapshotMethods.getTotalComplaint();
+ 	var firstComplaint = snapshotMethods.getFirstComplaint();
+ 	var lastComplaint = snapshotMethods.getLastComplaint();
+ 	var incData = snapshotMethods.getPRStatus();
+ 	var appVersion = snapshotMethods.getAppVersion();
+	var platform = snapshotMethods.getPlatform();
+	var location = snapshotMethods.getlocation();
+	var avg = snapshotMethods.getAVG();
+	var originalLTV = snapshotMethods.getOriginalLTV();
+	
+	
+	var snapshot = "<p><i><b>Complaints in total: </b></i>" + totalComplaints +
+		"<br><i><b> Avg per day: </b></i>" + avg +
+		"<br><i><b> First complaint: </b></i>" + firstComplaint +
+		"<br><i><b> Last complaint: </b></i>" + lastComplaint +
+		"<br><i><b> PR Status: </b></i>" + incData + 
+		"<br><i><b> Original LTV: </b></i>" + originalLTV +
+		"<br><i><b> App Version: </b></i>" + appVersion + 
+		"<br><i><b> Platform: </b></i>" + platform +
+		"<br><i><b> Location: </b></i>" + location +
+		"</p>";
+	
+	current.sls_incident_snapshot = snapshot;
+	current.update();
+	
+
+		
+	})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-02-20 14:25:28</sys_created_on>
+        <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+        <sys_domain_path/>
+        <sys_id>cf17c8dadbcb80903a7d983cca9619e7</sys_id>
+        <sys_mod_count>76</sys_mod_count>
+        <sys_name>SLS Incident snapshot</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_cf17c8dadbcb80903a7d983cca9619e7</sys_update_name>
+        <sys_updated_by>liudmilap</sys_updated_by>
+        <sys_updated_on>2020-04-01 15:38:04</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=cf17c8dadbcb80903a7d983cca9619e7"/>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="oui" label="OUI" language="en" table="x_play4_sls_incident">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>oui</element>
+            <help/>
+            <hint/>
+            <label>OUI</label>
+            <language>en</language>
+            <name>x_play4_sls_incident</name>
+            <plural>OUIs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>mihailz</sys_created_by>
+            <sys_created_on>2020-04-09 13:00:45</sys_created_on>
+            <sys_id>8fe44267dbc4981077df3764e29619ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>OUI</sys_name>
+            <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+            <sys_update_name>sys_documentation_x_play4_sls_incident_oui_en</sys_update_name>
+            <sys_updated_by>mihailz</sys_updated_by>
+            <sys_updated_on>2020-04-09 13:00:45</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

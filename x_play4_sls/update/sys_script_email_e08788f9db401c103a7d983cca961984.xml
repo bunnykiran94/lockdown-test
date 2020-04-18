@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>sls_add_opened_by_to_cc</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+
+      if (!current.opened_by.email.nil()) {
+		  email.addAddress("cc", current.opened_by.email.toString(), current.opened_by.getDisplayValue());
+	  }
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-04-08 18:17:22</sys_created_on>
+        <sys_id>e08788f9db401c103a7d983cca961984</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sls_add_opened_by_to_cc</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_email_e08788f9db401c103a7d983cca961984</sys_update_name>
+        <sys_updated_by>liudmilap</sys_updated_by>
+        <sys_updated_on>2020-04-08 18:17:22</sys_updated_on>
+    </sys_script_email>
+</record_update>

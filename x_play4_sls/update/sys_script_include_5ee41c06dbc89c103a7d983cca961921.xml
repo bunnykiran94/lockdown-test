@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_play4_sls.SLS_prioriry_calc</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SLS_prioriry_calc</name>
+        <script><![CDATA[var SLS_prioriry_calc = Class.create();
+SLS_prioriry_calc.prototype = {
+    initialize: function() {
+    },
+	
+	setPriority: function(current){
+		var fieldsObj = {};
+		var confGR = new GlideRecord('x_play4_sls_priority_calc_configuration');
+		confGR.addQuery('studio', current.getValue('studio'));
+		confGR.query();
+		while(confGR.next()){
+			fieldsObj[confGR.getValue('type')] = true;
+		}
+		
+		var valuesObj = this._getFieldsValues(fieldsObj, current);
+		var weight = this._getWeight(valuesObj,current.getValue('studio'));
+		current.setValue('sls_priority', this._getPriority(weight));
+	},
+	
+	_getFieldsValues: function(fieldsObj, current){
+		for(var key in fieldsObj){
+			fieldsObj[key] = current.getDisplayValue(key);
+		}
+		return fieldsObj;
+	},
+	
+	_getWeight: function(valuesObj, studio){
+		//valuesObj - {"<incident ticket column name>":"<it's value>"}
+		var weight = 1;
+		var confGR = new GlideRecord('x_play4_sls_priority_calc_configuration');
+		confGR.addQuery('studio',studio);
+		confGR.query();
+		while(confGR.next()){
+			for(var key in valuesObj){
+				if(confGR.name.label.toString() == valuesObj[key] &&
+				   confGR.getValue('type') == key){
+					 weight = weight * confGR.getValue('value');
+				}
+			}
+		}
+		return weight;
+	},
+	
+	_getPriority: function(weigth){
+		var priorityConfig = JSON.parse(gs.getProperty('sls.priority.calc.conf'));
+		for(var i=0; i<priorityConfig.length;i++){
+			if(weigth>priorityConfig[i].min && weigth<priorityConfig[i].max){
+				return priorityConfig[i].priority;
+			}
+		}
+// 		if(weigth<50){
+// 			return 'c6c45df2dbeecc10e9ae96f8f4961935';
+// 		}
+// 		if(weigth>50 && weigth<72){
+// 			return 'f2e4d5b2dbeecc10e9ae96f8f4961944';
+// 		}
+// 		if(weigth>72){
+// 			return '68059536dbeecc10e9ae96f8f49619ab';
+// 		}
+	},
+
+    type: 'SLS_prioriry_calc'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mihailz</sys_created_by>
+        <sys_created_on>2020-04-09 13:50:24</sys_created_on>
+        <sys_id>5ee41c06dbc89c103a7d983cca961921</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>SLS_prioriry_calc</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_include_5ee41c06dbc89c103a7d983cca961921</sys_update_name>
+        <sys_updated_by>mihailz</sys_updated_by>
+        <sys_updated_on>2020-04-10 10:38:48</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description>Edit SLS Incident snapshot</description>
+        <media_type/>
+        <name>edit_snapshot</name>
+        <scoped_name>x_play4_sls_edit_snapshot</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-02-05 15:00:18</sys_created_on>
+        <sys_id>ba1e7a9ddbb60c903a7d983cca96195e</sys_id>
+        <sys_mod_count>108</sys_mod_count>
+        <sys_name>edit_snapshot</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_ui_macro_ba1e7a9ddbb60c903a7d983cca96195e</sys_update_name>
+        <sys_updated_by>liudmilap</sys_updated_by>
+        <sys_updated_on>2020-04-03 10:51:45</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	<input type="button" onclick="recalcSnapshot(g_form.getUniqueValue())" style="background-color:DodgerBlue; color:white" value="Recalculate snapshot" class="selected_action action_context btn btn-primary"/>
+	
+	
+<script>
+	function recalcSnapshot(id){
+	
+	var loadingDialog = new GlideDialogWindow("global.dialog_loading", true);
+	loadingDialog.setPreference('table', 'loading');
+	<!-- loadingDialog.setSize(750,300); -->
+	loadingDialog.setTitle('Calculating snapshot ...');
+	loadingDialog.render();
+	
+	var gaSnapshot = new GlideAjax('SLSIncidentSnapshotUtilsClient');
+	gaSnapshot.addParam('sysparm_name','recalculateSnapshot');
+	gaSnapshot.addParam('incSysID', id);
+	gaSnapshot.getXMLWait();
+	var res = gaSnapshot.getAnswer();
+	//alert(res);
+		
+	
+	setTimeout(function() {
+		loadingDialog.destroy();
+	}, 3000);
+	
+	}
+	
+	
+</script>
+	
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

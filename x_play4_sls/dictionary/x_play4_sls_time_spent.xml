@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Time spent" max_length="40" name="x_play4_sls_time_spent" sizeclass="0" type="collection">
+        <element label="Comment" max_length="400" name="comment" type="string"/>
+        <element choice="1" dependent="type" dependent_on_field="type" label="Subtype" max_length="40" name="subtype" type="choice" use_dependent_field="true">
+            <choice>
+                <element dependent_value="internal_request" inactive_on_update="false" label="Business" value="business"/>
+                <element dependent_value="internal_request" inactive_on_update="false" label="CS" value="cs"/>
+                <element dependent_value="internal_request" inactive_on_update="false" label="IT" value="it"/>
+                <element dependent_value="internal_request" inactive_on_update="false" label="Manager" value="manager"/>
+                <element dependent_value="onboarding" inactive_on_update="false" label="New member" value="new_member"/>
+                <element dependent_value="onboarding" inactive_on_update="false" label="New studio" value="new_studio"/>
+                <element dependent_value="internal_request" inactive_on_update="false" label="NOC" value="noc"/>
+                <element dependent_value="internal_request" inactive_on_update="false" label="RnD" value="rnd"/>
+            </choice>
+        </element>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Documentation preparation" value="documentation_preparation"/>
+                <element inactive_on_update="false" label="Incidents" value="incidents"/>
+                <element inactive_on_update="false" label="Internal project" value="internal_project"/>
+                <element inactive_on_update="false" label="Internal request" value="internal_request"/>
+                <element inactive_on_update="false" label="Onboarding" value="onboarding"/>
+                <element inactive_on_update="false" label="Outlook" value="outlook"/>
+            </choice>
+        </element>
+        <element label="Affected business service" max_length="32" name="u_affected_business_service" reference="x_play4_sls_config_value" reference_qual="element=business_service^EQ" reference_qual_condition="element=business_service^EQ" type="reference"/>
+        <element default="javascript:gs.getUserID()" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Creator" max_length="32" name="u_creator" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element label="Duration" max_length="40" name="u_duration" type="glide_duration"/>
+        <element label="Time spent" max_length="40" name="u_duration_min" type="integer"/>
+        <element label="Incident number" max_length="32" name="u_incident_number" reference="x_play4_sls_incident" type="reference"/>
+        <element label="On duty" max_length="40" name="u_on_duty" type="boolean"/>
+        <index name="index">
+            <element name="u_incident_number"/>
+        </index>
+        <index name="index2">
+            <element name="u_creator"/>
+        </index>
+        <index name="index3">
+            <element name="u_affected_business_service"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="ffc3f1dfdbb68410e9ae96f8f496191a" sys_domain="c919ba2f4a36231200050bc7cc6bf272" table="x_play4_sls_dependencies_configuration" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>mihailz</sys_created_by>
+            <sys_created_on>2020-02-11 14:37:21</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>33c3f1dfdbb68410e9ae96f8f496191c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_play4_sls_dependencies_configuration" name="x_play4_sls_dependencies_configuration" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">ffc3f1dfdbb68410e9ae96f8f496191a</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_play4_sls_dependencies_configuration" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">ab7fed1bdbb68410e9ae96f8f4961950</sys_ui_section>
+            <sys_updated_by>mihailz</sys_updated_by>
+            <sys_updated_on>2020-02-11 14:37:21</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>mihailz</sys_created_by>
+            <sys_created_on>2020-02-11 14:37:21</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>bbc37d53dbf68410e9ae96f8f49619d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_play4_sls_dependencies_configuration" name="x_play4_sls_dependencies_configuration" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">ffc3f1dfdbb68410e9ae96f8f496191a</sys_ui_form>
+            <sys_ui_section caption="Root cause" display_value="Root cause" name="x_play4_sls_dependencies_configuration" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">77c37d53dbf68410e9ae96f8f49619d1</sys_ui_section>
+            <sys_updated_by>mihailz</sys_updated_by>
+            <sys_updated_on>2020-02-11 14:37:21</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>mihailz</sys_created_by>
+            <sys_created_on>2020-02-11 14:37:58</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>bcf33913dbf68410e9ae96f8f49619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_play4_sls_dependencies_configuration" name="x_play4_sls_dependencies_configuration" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">ffc3f1dfdbb68410e9ae96f8f496191a</sys_ui_form>
+            <sys_ui_section caption="Issue level" display_value="Issue level" name="x_play4_sls_dependencies_configuration" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">30f33913dbf68410e9ae96f8f49619fc</sys_ui_section>
+            <sys_updated_by>mihailz</sys_updated_by>
+            <sys_updated_on>2020-02-11 14:37:58</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>mihailz</sys_created_by>
+            <sys_created_on>2020-02-11 14:39:54</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>55643193dbf68410e9ae96f8f496190a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_play4_sls_dependencies_configuration" name="x_play4_sls_dependencies_configuration" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">ffc3f1dfdbb68410e9ae96f8f496191a</sys_ui_form>
+            <sys_ui_section caption="Category" display_value="Category" name="x_play4_sls_dependencies_configuration" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">91643193dbf68410e9ae96f8f4961907</sys_ui_section>
+            <sys_updated_by>mihailz</sys_updated_by>
+            <sys_updated_on>2020-02-11 14:39:54</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_play4_sls_dependencies_configuration</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>mihailz</sys_created_by>
+            <sys_created_on>2020-02-11 14:37:21</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>ffc3f1dfdbb68410e9ae96f8f496191a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_play4_sls_dependencies_configuration</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+            <sys_update_name>sys_ui_form_sections_ffc3f1dfdbb68410e9ae96f8f496191a</sys_update_name>
+            <sys_updated_by>mihailz</sys_updated_by>
+            <sys_updated_on>2020-02-11 14:37:21</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

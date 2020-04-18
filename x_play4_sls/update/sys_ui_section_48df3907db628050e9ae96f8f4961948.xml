@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Incident snapshot" section_id="48df3907db628050e9ae96f8f4961948" sys_domain="c919ba2f4a36231200050bc7cc6bf272" table="x_play4_sls_incident" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_play4_sls_SLSIncidentSnapshot.xml</element>
+            <position>0</position>
+            <sys_created_by>liudmilap</sys_created_by>
+            <sys_created_on>2020-02-26 13:12:17</sys_created_on>
+            <sys_id>0c30bac4db9348103a7d983cca96197d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="SLSIncidentSnapshot">745faec4db5348103a7d983cca961975</sys_ui_formatter>
+            <sys_ui_section caption="Incident snapshot" display_value="Incident snapshot" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">48df3907db628050e9ae96f8f4961948</sys_ui_section>
+            <sys_updated_by>liudmilap</sys_updated_by>
+            <sys_updated_on>2020-02-26 13:12:17</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sls_incident_snapshot</element>
+            <position>1</position>
+            <sys_created_by>liudmilap</sys_created_by>
+            <sys_created_on>2020-02-26 13:12:18</sys_created_on>
+            <sys_id>c830bac4db9348103a7d983cca96197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Incident snapshot" display_value="Incident snapshot" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">48df3907db628050e9ae96f8f4961948</sys_ui_section>
+            <sys_updated_by>liudmilap</sys_updated_by>
+            <sys_updated_on>2020-02-26 13:12:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_play4_sls_edit_snapshot.xml</element>
+            <position>2</position>
+            <sys_created_by>liudmilap</sys_created_by>
+            <sys_created_on>2020-02-26 13:12:18</sys_created_on>
+            <sys_id>4c30bac4db9348103a7d983cca96197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Incident snapshot parameters">6490c715dbf60c903a7d983cca961982</sys_ui_formatter>
+            <sys_ui_section caption="Incident snapshot" display_value="Incident snapshot" name="x_play4_sls_incident" sys_domain="c919ba2f4a36231200050bc7cc6bf272" view="Default view">48df3907db628050e9ae96f8f4961948</sys_ui_section>
+            <sys_updated_by>liudmilap</sys_updated_by>
+            <sys_updated_on>2020-02-26 13:12:18</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Incident snapshot</caption>
+            <header>false</header>
+            <name>x_play4_sls_incident</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>mihailz</sys_created_by>
+            <sys_created_on>2020-01-29 10:35:37</sys_created_on>
+            <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+            <sys_domain_path/>
+            <sys_id>48df3907db628050e9ae96f8f4961948</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Incident snapshot</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+            <sys_update_name>sys_ui_section_48df3907db628050e9ae96f8f4961948</sys_update_name>
+            <sys_updated_by>mihailz</sys_updated_by>
+            <sys_updated_on>2020-01-29 10:35:37</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

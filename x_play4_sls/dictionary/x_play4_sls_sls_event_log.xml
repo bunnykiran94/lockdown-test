@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="SLS event log" max_length="40" name="x_play4_sls_sls_event_log" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Additional info" max_length="1000" name="additional_info" type="string"/>
+        <element label="Element" max_length="40" name="element" type="string"/>
+        <element label="Incident number" max_length="40" name="incident_number" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="New value" max_length="40" name="new_value" type="string"/>
+        <element label="Old value" max_length="40" name="old_value" type="string"/>
+    </element>
+</database>

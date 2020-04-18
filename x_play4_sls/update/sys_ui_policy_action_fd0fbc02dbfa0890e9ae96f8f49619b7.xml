@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>table</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>mihailz</sys_created_by>
+        <sys_created_on>2020-02-07 13:34:36</sys_created_on>
+        <sys_id>fd0fbc02dbfa0890e9ae96f8f49619b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>table</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_ui_policy_action_fd0fbc02dbfa0890e9ae96f8f49619b7</sys_update_name>
+        <sys_updated_by>mihailz</sys_updated_by>
+        <sys_updated_on>2020-02-07 13:34:36</sys_updated_on>
+        <table>x_play4_sls_event_configuration</table>
+        <ui_policy display_value="Hide table field">47de3802dbfa0890e9ae96f8f49619bb</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+</record_update>

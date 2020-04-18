@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="c919ba2f4a36231200050bc7cc6bf272" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Approval" name="Approval">1a9d02137f232200ee2e108c3ffa9113</category>
+        <collection>sysapproval_approver</collection>
+        <condition table="sysapproval_approver">state=requested^source_table=x_play4_sls_incident^EQ<item display_value="Requested" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="requested"/>
+            <item endquery="false" field="source_table" goto="false" newquery="false" operator="=" or="false" value="x_play4_sls_incident"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>approval.inserted</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><img style="align: baseline;" title="" src="whitelogo.pngx" alt="" width="239" height="60" align="baseline" border="" hspace="" vspace="" /></p>
+<div><span style="font-family: verdana, geneva; font-size: 10pt;"><span style="font-size: 12pt;">Dear ${approver},</span></span></div>
+<div><span style="font-family: verdana, geneva; font-size: 10pt;"><span style="font-size: 12pt;">${mail_script:sls_sysapproval_requested}</span></span></div>
+<div><hr /></div>
+<p>&nbsp;<span style="font-family: verdana, geneva; font-size: 10pt;">${mailto:mailto.approval}<br />&nbsp;<br /></span></p>
+<div><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp;</span></div>
+<div><span style="font-family: verdana, geneva; font-size: 10pt;">${mailto:mailto.rejection}</span></div>
+<div><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp;</span></div>
+<div><span style="text-decoration-line: underline; font-size: 10pt;"><span style="font-family: verdana, geneva;">Please add your comments for rejection inside replied message.</span></span></div>
+<div><span style="font-family: verdana, geneva; font-size: 10pt;">Click here to view ${sysapproval.sys_class_name}: <a title="LINK" href="/sp?id=form&amp;table=task&amp;sys_id=${sysapproval.sys_id}">LINK</a><br /><br />&nbsp;</span></div>
+<div><span style="font-family: verdana, geneva; font-size: 10pt;">Thank You.</span></div>
+<div><span style="font-family: verdana, geneva; font-size: 10pt;">Playtika SLS team.</span></div>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>SLS Incident approval required</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>approver</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>SLS - Approval required for ${sysapproval.short_description}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-04-10 08:57:37</sys_created_on>
+        <sys_domain>c919ba2f4a36231200050bc7cc6bf272</sys_domain>
+        <sys_domain_path/>
+        <sys_id>3af914dedbcc10503a7d983cca961973</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>SLS Incident approval required</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sysevent_email_action_3af914dedbcc10503a7d983cca961973</sys_update_name>
+        <sys_updated_by>liudmilap</sys_updated_by>
+        <sys_updated_on>2020-04-13 12:34:43</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

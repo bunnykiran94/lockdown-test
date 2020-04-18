@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="element" table="x_play4_sls_config_value" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>First complain</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>16e44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>first_complain</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Incident origin</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>56e44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>incident_origin</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Issue level</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>96e44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>issue_level</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Issue sublevel</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d6e44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>issue_sublevel</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OUI</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1ae44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>oui</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Priority</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ae44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>priotiry</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Status code</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9ae44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>status_code</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Status</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>10</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dae44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>status</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Studio</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>20</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1ee44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>studio</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Business unit</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>30</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ee44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>bu</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Domain</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>40</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9ee44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>domain</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Root cause category</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>50</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dee44267dbc4981077df3764e296193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>root_cause_cat</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Root cause subcategory</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>60</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>12e44267dbc4981077df3764e296193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>root_cause_subcat</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Issue level</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>70</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>52e44267dbc4981077df3764e296193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>issue_level</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Issue sublevel</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>80</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>92e44267dbc4981077df3764e296193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>issue_sublevel</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Business Service</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>90</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d2e44267dbc4981077df3764e296193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>business_service</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Category group</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>100</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>16e44267dbc4981077df3764e296193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>category_group</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Category</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>110</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>56e44267dbc4981077df3764e296193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>category</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>element</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Subcategory</label>
+            <language>en</language>
+            <name>x_play4_sls_config_value</name>
+            <sequence>120</sequence>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>96e44267dbc4981077df3764e296193f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>subcategory</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>element</element>
+            <name>x_play4_sls_config_value</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_id>d2e44267dbc4981077df3764e2961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>element</sys_name>
+            <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+            <sys_update_name>sys_choice_x_play4_sls_config_value_element</sys_update_name>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

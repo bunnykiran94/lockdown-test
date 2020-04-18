@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>category</field>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>mihailz</sys_created_by>
+        <sys_created_on>2020-01-29 09:00:36</sys_created_on>
+        <sys_id>9ad9e90bdbae4050e9ae96f8f4961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>category</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9ad9e90bdbae4050e9ae96f8f4961935</sys_update_name>
+        <sys_updated_by>mihailz</sys_updated_by>
+        <sys_updated_on>2020-01-29 09:00:36</sys_updated_on>
+        <table>x_play4_sls_incident</table>
+        <ui_policy display_value="Make category readonly/writable">4e2921c7dbae4050e9ae96f8f49619a8</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_play4_sls.SLS_watermark</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>SLS_watermark</name>
+        <script><![CDATA[var SLS_watermark = Class.create();
+SLS_watermark.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getCurrentWatermark: function(){
+		var currentSysId = this.getParameter('currentSysId');
+		var watermarksGR = new GlideRecord('sys_watermark');
+		watermarksGR.addQuery('source_id',currentSysId);
+		watermarksGR.query();
+		if(watermarksGR.next()){
+			return watermarksGR.getValue('number');
+		}
+		else{
+			watermarksGR = new GlideRecord('sys_watermark');
+			watermarksGR.initialize();
+			watermarksGR.setValue("source_id",currentSysId);
+			watermarksGR.setValue("source_table","x_play4_sls_incident");
+			watermarksGR.insert();
+			return watermarksGR.getValue("number");
+		}
+	},
+	
+	getSysProp: function(){
+		var propName = this.getParameter('propName');
+		return gs.getProperty(propName);
+	},
+	
+	
+    type: 'SLS_watermark'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mihailz</sys_created_by>
+        <sys_created_on>2020-03-17 13:35:39</sys_created_on>
+        <sys_id>d681b92edb238810e9ae96f8f4961927</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>SLS_watermark</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_include_d681b92edb238810e9ae96f8f4961927</sys_update_name>
+        <sys_updated_by>mihailz</sys_updated_by>
+        <sys_updated_on>2020-03-19 15:03:35</sys_updated_on>
+    </sys_script_include>
+</record_update>

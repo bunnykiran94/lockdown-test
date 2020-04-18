@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Dependencies configuration" max_length="40" name="x_play4_sls_dependencies_configuration" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Business unit" max_length="32" name="business_unit" reference="x_play4_sls_config_value" reference_qual="element=bu^EQ" reference_qual_condition="element=bu^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Category" max_length="32" name="category" reference="x_play4_sls_config_value" reference_qual="element=category^EQ" reference_qual_condition="element=category^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Category group" max_length="32" name="category_group" reference="x_play4_sls_config_value" reference_qual="element=category_group^EQ" reference_qual_condition="element=category_group^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Domain" max_length="32" name="domain" reference="x_play4_sls_config_value" reference_qual="element=domain^EQ" reference_qual_condition="element=domain^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Issue level" max_length="32" name="issue_level" reference="x_play4_sls_config_value" reference_qual="element=issue_level^EQ" reference_qual_condition="element=issue_level^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Issue sublevel" max_length="32" name="issue_sublevel" reference="x_play4_sls_config_value" reference_qual="element=issue_sublevel^EQ" reference_qual_condition="element=issue_sublevel^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Root cause category" max_length="32" name="root_cause_category" reference="x_play4_sls_config_value" reference_qual="element=root_cause_cat^EQ" reference_qual_condition="element=root_cause_cat^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Root cause subcategory" max_length="32" name="root_cause_subcategory" reference="x_play4_sls_config_value" reference_qual="element=root_cause_subcat^EQ" reference_qual_condition="element=root_cause_subcat^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Studio" max_length="32" name="studio" reference="x_play4_sls_config_value" reference_qual="element=studio^EQ" reference_qual_condition="element=studio^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Subcategory" max_length="32" name="subcategory" reference="x_play4_sls_config_value" reference_qual="element=subcategory^EQ" reference_qual_condition="element=subcategory^EQ" type="reference"/>
+        <index name="index">
+            <element name="studio"/>
+        </index>
+        <index name="index2">
+            <element name="root_cause_category"/>
+        </index>
+        <index name="index3">
+            <element name="domain"/>
+        </index>
+        <index name="index4">
+            <element name="issue_sublevel"/>
+        </index>
+        <index name="index5">
+            <element name="root_cause_subcategory"/>
+        </index>
+        <index name="index6">
+            <element name="issue_level"/>
+        </index>
+        <index name="index7">
+            <element name="category"/>
+        </index>
+        <index name="index8">
+            <element name="subcategory"/>
+        </index>
+        <index name="index9">
+            <element name="business_unit"/>
+        </index>
+        <index name="index10">
+            <element name="category_group"/>
+        </index>
+    </element>
+</database>

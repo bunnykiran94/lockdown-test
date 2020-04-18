@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="type" table="x_play4_sls_priority_calc_configuration" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Category</label>
+            <language>en</language>
+            <name>x_play4_sls_priority_calc_configuration</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>62e44267dbc4981077df3764e2961969</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>category</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>First complain</label>
+            <language>en</language>
+            <name>x_play4_sls_priority_calc_configuration</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a2e44267dbc4981077df3764e2961969</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>first_complain</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OUI</label>
+            <language>en</language>
+            <name>x_play4_sls_priority_calc_configuration</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e2e44267dbc4981077df3764e2961969</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+            <value>oui</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <name>x_play4_sls_priority_calc_configuration</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:03</sys_created_on>
+            <sys_id>22e44267dbc4981077df3764e296196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>type</sys_name>
+            <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+            <sys_update_name>sys_choice_x_play4_sls_priority_calc_configuration_type</sys_update_name>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:03</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_play4_sls.developer</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>true</scoped_admin>
+        <suffix>developer</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+        <sys_created_on>2020-04-15 14:48:18</sys_created_on>
+        <sys_id>b7fb5f3bdb40d81077df3764e2961918</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_play4_sls.developer</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_user_role_b7fb5f3bdb40d81077df3764e2961918</sys_update_name>
+        <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+        <sys_updated_on>2020-04-15 14:51:51</sys_updated_on>
+    </sys_user_role>
+</record_update>

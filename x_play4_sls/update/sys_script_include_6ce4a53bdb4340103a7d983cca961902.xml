@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_play4_sls.SLSIncidentSnapshotUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SLSIncidentSnapshotUtils</name>
+        <script><![CDATA[var SLSIncidentSnapshotUtils = Class.create();
+SLSIncidentSnapshotUtils.prototype = {
+	initialize: function(sysID) {
+		this.sysID = sysID;
+		this.data = {};
+		this.data.appVersion = "";
+		this.data.platform = "";
+		this.data.prStatus = "";
+		this.data.location = "";
+		this.data.avg = "";
+		this.data.originalLTV = "";
+		
+		this.getIncidentData();
+			
+	},
+		
+		getIncidentData: function() {
+			var appVersion = [];
+			var app = [];
+			var platform = [];
+			var pl = [];
+			var tier = [];
+			var tr = '';
+			var location = [];
+			var loc = '';
+			var date, day;
+			var days = [];
+			var originalLTV = 0;
+			var currencyCode;
+			
+			var grInc = new GlideRecord('incident'); // table -> 'incident'
+			grInc.addQuery('u_incident_type', 'Customer Support');
+			grInc.addQuery('u_major_sls_incident', this.sysID);
+			grInc.query();
+			while (grInc.next()) {
+				app = grInc.u_appversion.getDisplayValue();
+				if (app) {
+					appVersion.push(app);
+				}
+				
+				pl = grInc.u_platform.getDisplayValue();
+				if (pl) {
+					platform.push(pl);
+				}
+				
+				tr = grInc.u_customer.u_trs_status.getDisplayValue();
+				if (tr) {
+					tier.push(tr);
+				}
+				
+				loc = grInc.u_geo_location_country;
+				if (loc.length > 0) {
+					loc = substring(0, loc.length - 1);
+				} else {
+					try {
+						loc = JSON.parse(grInc.u_geo_location_full).country;
+					}
+					catch (err) {
+						loc = grInc.u_country;
+					}
+					if ((!loc) || (loc === 'Unknown')) {
+						loc = grInc.u_country;
+					}
+				}
+				
+				if ((loc) && (loc !== 'Unknown')) {
+					location.push(loc);
+				}
+				
+				date = grInc.getValue('sys_created_on');
+				day = date.slice(date.lastIndexOf("-") + 1, date.lastIndexOf(" "));
+				days.push(day);
+				
+				originalLTV += parseFloat(grInc.getValue('u_live_ltv'));
+				currencyCode = grInc.u_live_ltv.getDisplayValue().charAt(0);
+				
+			}
+			
+			this.data.appVersion = this.getUnique(appVersion).join(", ");
+			this.data.platform = this.makeCalculation(platform);
+			this.data.prStatus = this.makeCalculation(tier);
+			this.data.location = this.makeCalculation(location);
+			this.data.avg = this.getAverage(days);
+			this.data.originalLTV = currencyCode + originalLTV.toString();
+			
+		},
+	
+		getAverage: function(arr) {
+			var obj = {};
+			var sum = 0;
+			var count = 0;
+			
+			arr.forEach(function(i) {obj[i] = (obj[i] || 0) + 1;});
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					sum += obj[key];
+					count ++;
+				}
+			 }
+			return Math.round(sum/count);
+			
+		},
+		
+		getTotalComplaint: function() {
+			var count = new GlideAggregate('incident'); // table -> 'incident'
+			count.addQuery('u_incident_type', '=', 'Customer Support');
+			count.addQuery('u_major_sls_incident', '=', this.sysID);
+			count.addAggregate('COUNT');
+			count.query();
+			var totalCount = 0;
+			if (count.next()) {
+				totalCount = count.getAggregate('COUNT');
+			}
+			return totalCount;
+		},
+		
+		getFirstComplaint: function() {
+			var first = '';
+			var grInc = new GlideRecord('incident'); // table -> 'incident'
+			grInc.addQuery('u_incident_type', 'Customer Support');
+			grInc.addQuery('u_major_sls_incident', this.sysID);
+			grInc.orderBy('sys_created_on');
+			grInc.setLimit(1);
+			grInc.query();
+			if (grInc.next()) {
+				first = grInc.sys_created_on.getDisplayValue();
+				if (!first) {
+					first = grInc.opened_at.getDisplayValue();
+				}
+			}
+			return first;
+		},
+		
+		getLastComplaint: function() {
+			var last = '';
+			var grInc = new GlideRecord('incident'); // table -> 'incident'
+			grInc.addQuery('u_incident_type', 'Customer Support');
+			grInc.addQuery('u_major_sls_incident', this.sysID);
+			grInc.orderByDesc('sys_created_on');
+			grInc.setLimit(1);
+			grInc.query();
+			if (grInc.next()) {
+				last = grInc.sys_created_on.getDisplayValue();
+				if (!last) {
+					last = grInc.opened_at.getDisplayValue();
+				}
+			}
+			return last;
+		},
+		
+		makeCalculation: function(arr) {
+			var count = {};
+			arr.forEach(function(i) {count[i] = (count[i] || 0) + 1;});
+				return this.makeString(count);
+			},
+			
+		makeString: function(arr){
+			var str = [];
+			for (var key in arr) {
+				str.push(key + ': ' + arr[key]);
+			}
+			return str.join(', ').replace("none", "Empty");
+		},
+		
+		getUnique: function (arr) {
+			return arr.sort().filter(function(item, pos, a) {return !pos || item != a[pos - 1];});
+		},
+		
+		getPRStatus: function() {
+			return this.data.prStatus;
+		},
+		
+		getAppVersion: function() {
+			return this.data.appVersion;
+		},
+		
+		getPlatform: function() {
+			return this.data.platform;
+		},
+		
+		getlocation: function() {
+			return this.data.location;
+		},
+	
+		getAVG: function() {
+			return this.data.avg;
+		},
+	
+		getOriginalLTV: function() {
+			return this.data.originalLTV;
+		},
+	
+	recalculateSnapshot: function() {
+		var res = 'result';
+// 		var snap = "<p><i><b>Complaints in total: </b></i>" + this.getTotalComplaint() +
+// 		"<br><i><b> Avg per day: </b></i>" + this.getAVG() +
+// 		"<br><i><b> First complaint: </b></i>" + this.getFirstComplaint() +
+// 		"<br><i><b> Last complaint: </b></i>" + this.getLastComplaint() +
+// 		"<br><i><b> PR Status: </b></i>" + this.getPRStatus() + 
+// 		"<br><i><b> Original LTV: </b></i>" + this.getOriginalLTV() +
+// 		"<br><i><b> App Version: </b></i>" + this.getAppVersion() + 
+// 		"<br><i><b> Platform: </b></i>" + this.getPlatform() +
+// 		"<br><i><b> Location: </b></i>" + this.getlocation() +
+// 		"</p>";
+		
+// 		var grInc = new GlideRecord('incident'); // table -> 'incident'
+// 		if (grInc.get(this.sysID)) {
+// 			grInc.sls_incident_snapshot = snap;
+// 			grInc.update();
+// 			res = 'updated snapshot';
+// 		}
+		return res;
+	},
+		
+		type: 'SLSIncidentSnapshotUtils'
+	};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-02-25 13:09:15</sys_created_on>
+        <sys_id>6ce4a53bdb4340103a7d983cca961902</sys_id>
+        <sys_mod_count>105</sys_mod_count>
+        <sys_name>SLSIncidentSnapshotUtils</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_include_6ce4a53bdb4340103a7d983cca961902</sys_update_name>
+        <sys_updated_by>mihailz</sys_updated_by>
+        <sys_updated_on>2020-04-10 13:37:48</sys_updated_on>
+    </sys_script_include>
+</record_update>

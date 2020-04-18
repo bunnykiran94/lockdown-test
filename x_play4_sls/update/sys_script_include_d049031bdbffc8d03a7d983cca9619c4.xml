@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_play4_sls.addTimeSpent</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>addTimeSpent</name>
+        <script><![CDATA[var addTimeSpent = Class.create();
+addTimeSpent.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+slsAddTimeSpent:function(){
+	var incSysId = this.getParameter('sysparm_inc_id'); 
+	var duration = this.getParameter('sysparm_duration'); 
+	var affectedBS = this.getParameter('sysparm_affbc'); 
+	var isOnDuty = this.getParameter('sysparm_onduty');
+	var gr = new GlideRecord ('x_play4_sls_incident');
+	if(gr.get(incSysId)){
+		if(duration){
+			var timems = gr.u_time_spent.dateNumericValue();
+			timems = timems + duration*60*1000; 
+			gr.u_time_spent.setDateNumericValue(timems);
+			gr.update();
+		}
+	}
+	
+	var timeSpentGR = new GlideRecord('x_play4_sls_time_spent');
+	timeSpentGR.initialize();
+	timeSpentGR.u_duration.setDateNumericValue(duration*60*1000);
+	timeSpentGR.setValue('u_creator', gs.getUserID());
+	timeSpentGR.setValue('u_incident_number', incSysId);
+	timeSpentGR.setValue('u_affected_business_service', affectedBS);
+	timeSpentGR.setValue('u_on_duty', isOnDuty);
+	timeSpentGR.insert();
+},
+	
+getTimeSpentValue: function(){
+	var incSysId = this.getParameter('sysparm_inc_id'); 
+	var gr = new GlideRecord ('x_play4_sls_incident');
+	if(gr.get(incSysId)){
+		return gr.getValue("u_time_spent");
+	}
+},
+    type: 'addTimeSpent'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mihailz</sys_created_by>
+        <sys_created_on>2020-04-01 13:53:43</sys_created_on>
+        <sys_id>d049031bdbffc8d03a7d983cca9619c4</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>addTimeSpent</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_include_d049031bdbffc8d03a7d983cca9619c4</sys_update_name>
+        <sys_updated_by>mihailz</sys_updated_by>
+        <sys_updated_on>2020-04-01 16:04:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

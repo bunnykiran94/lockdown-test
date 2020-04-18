@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_play4_sls.SLS_fields_configuration</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SLS_fields_configuration</name>
+        <script><![CDATA[var SLS_fields_configuration = Class.create();
+SLS_fields_configuration.prototype = {
+    initialize: function() {
+		this.configTable = 'x_play4_sls_dependencies_configuration';
+    },
+	
+	updateEventStreamRecord: function(fieldName, eventName, incNumber, oldValue, newValue, addInfo){
+		var eventLogTableGR = new GlideRecord('x_play4_sls_sls_event_log');
+		eventLogTableGR.initialize();
+		
+		if(eventName)
+			eventLogTableGR.setValue('name',eventName);
+		if(fieldName)
+			eventLogTableGR.setValue('element',this._getColumnDisplayNameByValue('x_play4_sls_incident',fieldName));
+		if(incNumber)
+			eventLogTableGR.setValue('incident_number',incNumber);
+		if(newValue)
+			eventLogTableGR.setValue('new_value',newValue);
+		if(oldValue)
+			eventLogTableGR.setValue('old_value', oldValue);
+		if(addInfo)
+			eventLogTableGR.setValue('additional_info', addInfo);
+		eventLogTableGR.insert();
+	},
+	
+	_getColumnDisplayNameByValue: function(table, columnName){
+		var dictionaryGR = new GlideRecord('sys_dictionary');
+		dictionaryGR.addQuery('name', table);
+		dictionaryGR.addQuery('element', columnName);
+		dictionaryGR.setLimit(1);
+		dictionaryGR.query();
+		if(dictionaryGR.next()){
+			return dictionaryGR.getValue('column_label');
+		}
+	},
+	
+	getAvailiableRecords: function(current, fieldName){
+		var resultMap = {};
+		var successQuery = false;
+		var map = this._getMapping(fieldName);
+		var confTableGR = new GlideRecord(this.configTable);
+		var currentSLSColumnName;
+		var currentConfColumnName;
+		var currentSLSColumnValue;
+		confTableGR.addNotNullQuery(fieldName);
+		confTableGR.addActiveQuery();
+		for(var key in map){
+			 currentSLSColumnName = this._getColumnNameBySysId(key);
+			 currentConfColumnName = this._getColumnNameBySysId(map[key]);
+			 currentSLSColumnValue = current[currentSLSColumnName];
+ 				confTableGR.addQuery(currentConfColumnName,'CONTAINS',currentSLSColumnValue);
+		}
+
+		confTableGR.query();
+		while(confTableGR.next()){
+			if(confTableGR.getValue(fieldName).indexOf(',') != -1){
+				//multiple value
+				var valuesArray = confTableGR.getValue(fieldName).split(',');
+				for(var i=0; i<valuesArray.length; i++){
+					resultMap[valuesArray[i]] = true;	
+				}
+			}else{
+				//single value
+				resultMap[confTableGR.getValue(fieldName)] = true;
+			}
+		}
+		return 'sys_idIN' + this._getKeysArrayFromMap(resultMap).join(',');
+	},
+	
+   getTableColumns: function(tableName){
+	    var arr_fields=[];
+		var dyctionaryGR = new GlideRecord('sys_dictionary');
+		dyctionaryGR.addQuery('name', tableName);
+	    dyctionaryGR.addQuery('element','DOES NOT CONTAIN','sys_');
+	    dyctionaryGR.addEncodedQuery('internal_type!=collection^ORinternal_type=NULL');
+	    dyctionaryGR.query();
+
+		while(dyctionaryGR.next()){
+			arr_fields.push(dyctionaryGR.getValue('sys_id'));	
+		}
+	   
+	   return 'sys_idIN'+ arr_fields.join(',');
+   },
+	
+	_getColumnNameBySysId: function(sysId){
+		var dictionaryGR = new GlideRecord('sys_dictionary');
+		if(dictionaryGR.get(sysId)){
+			return dictionaryGR.getValue('element');
+		}
+	},
+	
+	_getSysIdByColumnName: function(ColumnName, table){
+		var dictionaryGR = new GlideRecord('sys_dictionary');
+		dictionaryGR.addQuery('name', table);
+		dictionaryGR.addQuery('element', ColumnName);
+		dictionaryGR.setLimit(1);
+		dictionaryGR.query();
+		if(dictionaryGR.next()){
+			return dictionaryGR.getValue('sys_id');
+		}
+	},
+	
+	_getOrderCurrentField: function(map, fieldName){
+		for(var key in map){
+			if(this._getColumnNameBySysId(map[key].field) == fieldName){
+				return map[key].order;
+			}
+		}
+    },
+	
+	_getKeysArrayFromMap: function(resultMap){
+		var resultArray = [];
+		for(var key in resultMap){
+			resultArray.push(key);
+		}
+		return resultArray;
+	},
+	
+	_getMapping: function(fieldName){
+		var map = {};
+		var targetField = this._getSysIdByColumnName(fieldName, 'x_play4_sls_dependencies_configuration');
+		var configMappingGR = new GlideRecord('x_play4_sls_config_mapping');
+		configMappingGR.addQuery('target_field',targetField);
+		configMappingGR.addActiveQuery();
+		configMappingGR.query();
+		while(configMappingGR.next()){
+			map[configMappingGR.getValue('sls_field')] = configMappingGR.getValue('config_field');
+		}
+		
+		return map;
+	},
+
+    type: 'SLS_fields_configuration'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mihailz</sys_created_by>
+        <sys_created_on>2020-02-07 15:14:38</sys_created_on>
+        <sys_id>47c5dd8adb7e0890e9ae96f8f4961952</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>SLS_fields_configuration</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_include_47c5dd8adb7e0890e9ae96f8f4961952</sys_update_name>
+        <sys_updated_by>RShapoval</sys_updated_by>
+        <sys_updated_on>2020-04-10 15:20:15</sys_updated_on>
+    </sys_script_include>
+</record_update>

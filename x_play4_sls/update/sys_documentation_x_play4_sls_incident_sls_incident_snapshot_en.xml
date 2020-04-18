@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="sls_incident_snapshot" label="Incident snapshot" language="en" table="x_play4_sls_incident">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>sls_incident_snapshot</element>
+            <help/>
+            <hint/>
+            <label>Incident snapshot</label>
+            <language>en</language>
+            <name>x_play4_sls_incident</name>
+            <plural>Incident snapshots</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>liudmilap</sys_created_by>
+            <sys_created_on>2020-02-14 11:27:00</sys_created_on>
+            <sys_id>87e48267dbc4981077df3764e296190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Incident snapshot</sys_name>
+            <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+            <sys_update_name>sys_documentation_x_play4_sls_incident_sls_incident_snapshot_en</sys_update_name>
+            <sys_updated_by>liudmilap</sys_updated_by>
+            <sys_updated_on>2020-02-14 11:27:00</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

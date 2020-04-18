@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_formatter">
+    <sys_ui_formatter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <angular_module/>
+        <formatter>SLSIncidentSnapshot.xml</formatter>
+        <name>SLSIncidentSnapshot</name>
+        <sys_class_name>sys_ui_formatter</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-02-26 13:10:23</sys_created_on>
+        <sys_id>745faec4db5348103a7d983cca961975</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SLSIncidentSnapshot</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_ui_formatter_745faec4db5348103a7d983cca961975</sys_update_name>
+        <sys_updated_by>liudmilap</sys_updated_by>
+        <sys_updated_on>2020-02-26 13:10:23</sys_updated_on>
+        <table>x_play4_sls_incident</table>
+        <type>formatter</type>
+    </sys_ui_formatter>
+</record_update>

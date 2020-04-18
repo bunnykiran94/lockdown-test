@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Priority calc configuration" max_length="40" name="x_play4_sls_priority_calc_configuration" sizeclass="0" type="collection">
+        <element label="Name" max_length="32" name="name" reference="x_play4_sls_config_value" reference_qual="javascript:&quot;element=&quot; + current.type" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Studio" max_length="32" name="studio" reference="x_play4_sls_config_value" reference_qual="element=studio^EQ" reference_qual_condition="element=studio^EQ" type="reference"/>
+        <element choice="1" choice_field="element" choice_table="x_play4_sls_config_value" label="Type" max_length="32" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Category" value="category"/>
+                <element inactive_on_update="false" label="First complain" value="first_complain"/>
+                <element inactive_on_update="false" label="OUI" value="oui"/>
+            </choice>
+        </element>
+        <element label="Value" max_length="20" name="value" type="decimal"/>
+        <index name="index">
+            <element name="studio"/>
+        </index>
+        <index name="index2">
+            <element name="name"/>
+        </index>
+        <index name="index3">
+            <element name="type"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>sls_incident_link</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+	
+	var link = '<a href="/sp?id=form&table=task&sys_id=' + current.sys_id + '" style="font-size: 10pt">Click here to view the incident</a>';
+	template.print(link);
+	
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-04-08 17:06:20</sys_created_on>
+        <sys_id>f897fb6ddbccd8103a7d983cca961942</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sls_incident_link</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_script_email_f897fb6ddbccd8103a7d983cca961942</sys_update_name>
+        <sys_updated_by>liudmilap</sys_updated_by>
+        <sys_updated_on>2020-04-08 17:06:20</sys_updated_on>
+    </sys_script_email>
+</record_update>

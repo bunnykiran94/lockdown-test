@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="SLS incident" max_length="40" name="x_play4_sls_incident" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Business unit" max_length="32" name="business_unit" reference="x_play4_sls_config_value" reference_qual="element=bu^EQ" reference_qual_condition="element=bu^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Category" max_length="32" name="category" reference="x_play4_sls_config_value" reference_qual="javascript: new SLS_fields_configuration().getAvailiableRecords(current, &quot;category&quot;);" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true" label="Category group" max_length="32" name="category_group" reference="x_play4_sls_config_value" reference_qual="element=category_group^EQ" reference_qual_condition="element=category_group^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Domain" max_length="32" name="domain" reference="x_play4_sls_config_value" reference_qual="javascript: new SLS_fields_configuration().getAvailiableRecords(current, &quot;domain&quot;);" type="reference" use_reference_qualifier="advanced"/>
+        <element choice="1" label="First complain" max_length="32" name="first_complain" reference="x_play4_sls_config_value" reference_qual="element=first_complain^EQ" reference_qual_condition="element=first_complain^EQ" type="reference">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Incident origin" max_length="32" name="incident_origin" reference="x_play4_sls_config_value" reference_qual="element=incident_origin^EQ" reference_qual_condition="element=incident_origin^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Issue level" max_length="32" name="issue_level" reference="x_play4_sls_config_value" reference_qual="javascript: new SLS_fields_configuration().getAvailiableRecords(current, &quot;issue_level&quot;);" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true" label="Issue sublevel" max_length="32" name="issue_sublevel" reference="x_play4_sls_config_value" reference_qual="javascript: new SLS_fields_configuration().getAvailiableRecords(current, &quot;issue_sublevel&quot;);" type="reference" use_reference_qualifier="advanced"/>
+        <element choice="1" label="OUI" max_length="32" name="oui" reference="x_play4_sls_config_value" reference_qual="element=oui^EQ" reference_qual_condition="element=oui^EQ" type="reference">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Parent SLS Incident" max_length="40" name="parent_sls_incident" read_only="true" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Root cause category" max_length="32" name="root_cause_category_1" reference="x_play4_sls_config_value" reference_qual="javascript: new SLS_fields_configuration().getAvailiableRecords(current, &quot;root_cause_category&quot;);" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true" label="Root cause subcategory" max_length="32" name="root_cause_category_2" reference="x_play4_sls_config_value" reference_qual="javascript: new SLS_fields_configuration().getAvailiableRecords(current, &quot;root_cause_subcategory&quot;);" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true,ref_contributions=task_assignment_group_choose_by_person" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Assignment group" max_length="32" name="sls_assignment_group" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="SLS business service" max_length="32" name="sls_business_service" reference="x_play4_sls_config_value" reference_qual="element=business_service^EQ" reference_qual_condition="element=business_service^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Incident snapshot" max_length="8000" name="sls_incident_snapshot" read_only="true" type="html"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="medium" label="SLS Priority" max_length="32" name="sls_priority" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" value="high"/>
+                <element inactive_on_update="false" label="Low" value="low"/>
+                <element inactive_on_update="false" label="Medium" value="medium"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Closed reject" value="closed_reject"/>
+                <element inactive_on_update="false" label="Waiting for approval" value="waiting_for_approval"/>
+                <element inactive_on_update="false" label="Open" sequence="1" value="open"/>
+                <element inactive_on_update="false" label="Under investigation" sequence="2" value="under_investigation"/>
+                <element inactive_on_update="false" label="In process" sequence="3" value="in_process"/>
+                <element inactive_on_update="false" label="Pending" sequence="4" value="pending"/>
+                <element inactive_on_update="false" label="Resolved" sequence="5" value="resolved"/>
+                <element inactive_on_update="false" label="Discard" sequence="6" value="discard"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Status code" max_length="32" name="status_code" reference="x_play4_sls_config_value" reference_qual="element=status_code^EQ" reference_qual_condition="element=status_code^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Studio" max_length="32" name="studio" reference="x_play4_sls_config_value" reference_qual="element=studio^EQ" reference_qual_condition="element=studio^EQ" type="reference">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Subcategory" max_length="32" name="subcategory" reference="x_play4_sls_config_value" reference_qual="javascript: new SLS_fields_configuration().getAvailiableRecords(current, &quot;subcategory&quot;);" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true" label="Team" max_length="100" name="team" type="string"/>
+        <element label="Time spent" max_length="40" name="u_time_spent" read_only="true" type="glide_duration"/>
+    </element>
+</database>

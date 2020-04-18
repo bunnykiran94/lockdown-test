@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="sls_priority" table="x_play4_sls_incident" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>sls_priority</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>High</label>
+            <language>en</language>
+            <name>x_play4_sls_incident</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dbe4c267dbc4981077df3764e2961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:06</sys_updated_on>
+            <value>high</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>sls_priority</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Low</label>
+            <language>en</language>
+            <name>x_play4_sls_incident</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1fe4c267dbc4981077df3764e2961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:06</sys_updated_on>
+            <value>low</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>sls_priority</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Medium</label>
+            <language>en</language>
+            <name>x_play4_sls_incident</name>
+            <sequence/>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5fe4c267dbc4981077df3764e2961907</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:06</sys_updated_on>
+            <value>medium</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>sls_priority</element>
+            <name>x_play4_sls_incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>bhanukiran.gokarla@snc</sys_created_by>
+            <sys_created_on>2020-04-14 13:49:06</sys_created_on>
+            <sys_id>9be4c267dbc4981077df3764e2961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sls_priority</sys_name>
+            <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+            <sys_update_name>sys_choice_x_play4_sls_incident_sls_priority</sys_update_name>
+            <sys_updated_by>bhanukiran.gokarla@snc</sys_updated_by>
+            <sys_updated_on>2020-04-14 13:49:06</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

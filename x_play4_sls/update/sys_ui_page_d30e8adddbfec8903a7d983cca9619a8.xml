@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var p = gel("properties");
+
+function configureProperty(prop) {
+	if (prop.checked) {
+		alert("checked");
+	}
+}
+
+function submitForm(){
+   //Gets called if the 'OK' dialog button is clicked
+   //Make sure terms have been accepted
+/*   var terms = gel('accept_terms').value;
+   if(terms != 'true'){
+      //If terms are false stop submission
+      alert('Please accept the terms and conditions to continue your order.');
+      return false;
+   } */
+   //If accept checkbox is true do this...
+   GlideDialogWindow.get().destroy(); //Close the dialog window
+   //g_form.setValue('myvar', true); //Optionally set the value of a variable or field indicating acceptance
+}
+
+function cancelForm(){
+   GlideDialogWindow.get().destroy();
+}
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_play4_sls_add_incident_snapshot_parameter.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	<g:evaluate var="jvar_properties">
+		var prop = ["Complaints in total:", "First complaint:", "Last complaint:", "PR Status"];
+	</g:evaluate>
+	
+	<g:ui_form>
+	
+		<table width="100%">
+			<tr>
+			   <td>
+					<div>
+						
+					</div>
+				</td>
+			 </tr>
+			<tr>
+			   <td>
+					<div>
+						<g:ui_checkbox id="platform" name="platform" value="false"/>
+						<label for="platform">Platform</label>
+					</div>
+				</td>
+			 </tr>
+			<tr>
+			   <td>
+					<div>
+						<g:ui_checkbox id="location" name="location" value="false"/>
+						<label for="location">Location</label>
+					</div>
+				</td>
+			 </tr>
+			<tr>
+			   <td>
+				   <div>
+						<g:ui_checkbox id="app_version" name="app version" value="false"/>
+						<label for="app_version">App Version</label>
+					</div>
+				</td>
+			 </tr>
+			<tr id="dialog_buttons">
+				<td colspan="2" align="right">
+					<g:dialog_buttons_ok_cancel style="background-color:DodgerBlue; color:white" ok="return submitForm()" cancel="cancelForm()" ok_type="button" cancel_type="button"/>
+				</td>
+			 </tr>
+		</table>			
+
+	</g:ui_form>
+		
+</j:jelly>]]></html>
+        <name>add_incident_snapshot_parameter</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>liudmilap</sys_created_by>
+        <sys_created_on>2020-02-05 11:25:29</sys_created_on>
+        <sys_id>d30e8adddbfec8903a7d983cca9619a8</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>add_incident_snapshot_parameter</sys_name>
+        <sys_package display_value="SLS" source="x_play4_sls">722b5d68dbaac414e9ae96f8f496198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SLS">722b5d68dbaac414e9ae96f8f496198d</sys_scope>
+        <sys_update_name>sys_ui_page_d30e8adddbfec8903a7d983cca9619a8</sys_update_name>
+        <sys_updated_by>liudmilap</sys_updated_by>
+        <sys_updated_on>2020-02-07 10:56:47</sys_updated_on>
+    </sys_ui_page>
+</record_update>
